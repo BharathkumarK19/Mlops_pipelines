@@ -5,7 +5,6 @@ stages:
     - src/data_ingestion.py
     params:
     - data_ingestion.test_size
-    
     outs:
     - data/raw
   data_preprocessing:
@@ -41,10 +40,10 @@ stages:
     - src/model_evaluation.py
     metrics:
     - reports/metrics.json
-#params:
-#- dvclive/params.yaml
-#metrics:
-#- dvclive/metrics.json
-#plots:
-#- dvclive/plots/metrics:
-  #  x: step
+params:
+- dvclive/params.yaml
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step
